@@ -5,15 +5,14 @@ import java.util.Scanner;
 
 public class Main {
 
-    static String russianAlphabet = "абвгдежзийклмнопрстуфхцчшщьыъэюя";
+    static String russianAlphabet = "абвгдежзийклмнопрстуфхцчшщъыьэюя";
 
     public static String Multialphabetic(String text, String keyWord) {
         String alphabets[] = new String[keyWord.length()];
         for (int i = 0; i < keyWord.length(); i++) {
-            alphabets[i] = russianAlphabet.substring(russianAlphabet.indexOf(keyWord.charAt(i)), russianAlphabet.length() - 1) +
+            alphabets[i] = russianAlphabet.substring(russianAlphabet.indexOf(keyWord.charAt(i)), russianAlphabet.length()) +
                     russianAlphabet.substring(0, russianAlphabet.indexOf(keyWord.charAt(i)));
         }
-
         String newText = "";
         for (int i = 0; i < text.length(); i++) {
             for (int j = 0; j < alphabets.length; j++) {
@@ -24,6 +23,9 @@ public class Main {
                     if (i != text.length()) {
                         j = -1;
                     }
+                }
+                if(i == text.length()){
+                    break;
                 }
             }
 
@@ -81,8 +83,7 @@ public class Main {
                 String text = scanner.next();
                 System.out.println("Введите кодовое слово:");
                 String keyWord = scanner.next();
-                System.out.println("Д"+Multialphabetic(text, keyWord));
-
+                System.out.println("Дешифрованный текст:"+Multialphabetic(text, keyWord));
             }
             if (punct == 3) {
 
