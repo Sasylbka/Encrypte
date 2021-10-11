@@ -1,12 +1,25 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
 
     static String russianAlphabet = "абвгдежзийклмнопрстуфхцчшщъыьэюя";
 
+    public static String BlockMethod(String text, String keyword){
+        String newText="";
+        List<Integer> places=new ArrayList<>();
+        int j=0;
+        String sortedKey = Stream.of(keyword.split("")).sorted().collect(Collectors.joining());
+        for(int i =0;i<text.length();i++){
+        }
+        return newText;
+    }
     public static String Multialphabetic(String text, String keyWord) {
         String alphabets[] = new String[keyWord.length()];
         for (int i = 0; i < keyWord.length(); i++) {
@@ -86,7 +99,11 @@ public class Main {
                 System.out.println("Дешифрованный текст:"+Multialphabetic(text, keyWord));
             }
             if (punct == 3) {
-
+                System.out.println("Введите зашифрованный текст:");
+                String text = scanner.next();
+                System.out.println("Введите кодовое слово:");
+                String keyWord = scanner.next();
+                System.out.println("Дешифрованный текст:"+BlockMethod(text, keyWord));
             }
 
             if (punct == 4) {
