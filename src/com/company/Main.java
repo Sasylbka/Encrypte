@@ -8,7 +8,7 @@ public class Main {
 
     static String russianAlphabet = "абвгдежзийклмнопрстуфхцчшщъыьэюя";
     static String GammaAlphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя_0123456789";
-    static String BitwiseAdditionAlphabet = "!абвгдеёжзийклмнопрстуфхцчшщъыьэюя_0123456789abcdefghijklmnopqrstuvwxyz";
+    static String BitwiseAdditionAlphabet = "!абвгдеёжзийклмнопрстуфхцчшщъыьэюя_0123456789";
 
     public static String BitwiseAddition(String text,String gamma){
         String newText="";
